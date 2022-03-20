@@ -1,5 +1,5 @@
 {
-  "projectName": "template",
+  "projectName": "package-template",
   "projectOwner": "imranbarbhuiya",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -9,7 +9,19 @@
   "imageSize": 100,
   "commit": true,
   "commitConvention": "angular",
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "imranbarbhuiya",
+      "name": "Parbez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74945038?v=4",
+      "profile": "https://github.com/imranbarbhuiya",
+      "contributions": [
+        "code",
+        "maintenance",
+        "ideas"
+      ]
+    }
+  ],
   "contributorsPerLine": 7,
   "skipCi": true
 }
