@@ -23,7 +23,7 @@
 		"build": "tsup && tsc -b src",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
-		"format": "prettier --write '**/*.{ts,js,json,md}'",
+		"format": "prettier --write '**/*.{ts,js,mjs,json,md}'",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"prepublishOnly": "rollup-type-bundler",
