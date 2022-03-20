@@ -11,7 +11,7 @@ export default defineConfig({
   target: 'es2021',
   keepNames: true,
   // TODO: change name
-  globalName: 'package-name',
+  globalName: 'template',
   tsconfig: 'src/tsconfig.json',
   esbuildOptions: (options, context) => {
     if (context.format === 'cjs') {
