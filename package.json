@@ -23,6 +23,7 @@
 		"build": "tsup && tsc -b src",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
+		"format": "prettier --write '**/*.{ts,js,json,md}'",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"prepublishOnly": "rollup-type-bundler",
@@ -35,11 +36,14 @@
 		"access": "public"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^16.2.3",
+		"@commitlint/config-angular": "^16.2.3",
 		"@favware/rollup-type-bundler": "^1.0.7",
 		"@types/jest": "^27.4.1",
 		"@types/prettier": "^2",
 		"@typescript-eslint/eslint-plugin": "^5.15.0",
 		"@typescript-eslint/parser": "^5.15.0",
+		"conventional-changelog-cli": "^2.2.2",
 		"eslint": "^8.11.0",
 		"eslint-config-marine": "^9.3.2",
 		"eslint-config-prettier": "^8.5.0",
