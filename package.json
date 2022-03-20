@@ -25,7 +25,8 @@
 		"lint:fix": "eslint . --fix",
 		"test": "jest",
 		"test:watch": "jest --watch",
-		"prepublishOnly": "rollup-type-bundler"
+		"prepublishOnly": "rollup-type-bundler",
+		"postinstall": "husky install"
 	},
 	"keywords": [
 		"some keywords"
@@ -63,5 +64,11 @@
 		"url": "https://github.com/imranbarbhuiya/duration/issues"
 	},
 	"homepage": "https://duration.js.org/",
-	"packageManager": "yarn@3.2.0"
+	"packageManager": "yarn@3.2.0",
+	"lint-staged": {
+		"*.ts": [
+			"prettier --write",
+			"eslint --fix"
+		]
+	}
 }
