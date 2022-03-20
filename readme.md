@@ -2,8 +2,6 @@
 
 # @imranbarbhuiya/template
 
-A small description of the package.
-
 **Template for Parbez's Repositories.**
 
 [![GitHub](https://img.shields.io/github/license/imranbarbhuiya/package-template)](https://github.com/imranbarbhuiya/package-template/blob/main/LICENSE.md)
@@ -19,9 +17,16 @@ A small description of the package.
 3. Enable Codecov for the repository
 4. Remove this section from the README
 
-## Documentation
+## Description
+
+A description of the package.
 
 Read Full Documentation [here](https://package-name.js.org/).
+
+## Features
+
+- TypeScript friendly
+- Offers CJS, ESM and UMD builds
 
 ## Install
 
@@ -37,16 +42,8 @@ yarn add package-name
 
 ## Usage
 
-### esm or Typescript
-
 ```ts
-import {} from 'package-name';
-```
-
-### CommonJS
-
-```js
-const {} = require('package-name');
+import { package } from 'package-name';
 ```
 
 ### Some contents goes here //TODO
@@ -65,4 +62,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-## This template is inspired by [sapphire-template](https://github.com/sapphiredev/sapphire-template)
+---
+
+This template is inspired by [sapphire-template](https://github.com/sapphiredev/sapphire-template)
