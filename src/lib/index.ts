@@ -1,3 +1,7 @@
 export class Index {
-  public static readonly version = '0.0.1';
+	public constructor() {
+		console.log('Hello World!');
+	}
+
+	public readonly version = '0.0.1';
 }
