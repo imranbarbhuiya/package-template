@@ -64,12 +64,12 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/imranbarbhuiya/duration.git"
+		"url": "git+https://github.com/imranbarbhuiya/template.git"
 	},
 	"bugs": {
-		"url": "https://github.com/imranbarbhuiya/duration/issues"
+		"url": "https://github.com/imranbarbhuiya/template/issues"
 	},
-	"homepage": "https://duration.js.org/",
+	"homepage": "https://template.js.org/",
 	"packageManager": "yarn@3.2.0",
 	"lint-staged": {
 		"*.ts": [
