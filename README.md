@@ -5,8 +5,8 @@
 **Template for Parbez's Repositories.**
 
 [![GitHub](https://img.shields.io/github/license/imranbarbhuiya/package-template)](https://github.com/imranbarbhuiya/package-template/blob/main/LICENSE.md)
-[![codecov](https://codecov.io/gh/imranbarbhuiya/package-template/branch/main/graph/badge.svg?token=token)](https://codecov.io/gh/imranbarbhuiya/package-template)
-[![npm](https://img.shields.io/npm/v/@imranbarbhuiya/package-template?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@imranbarbhuiya/package-template)
+[![codecov](https://codecov.io/gh/imranbarbhuiya/template/branch/main/graph/badge.svg?token=token)](https://codecov.io/gh/imranbarbhuiya/template)
+[![npm](https://img.shields.io/npm/v/@imranbarbhuiya/template?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@imranbarbhuiya/template)
 
 </div>
 
@@ -21,7 +21,7 @@
 
 A description of the package.
 
-Read Full Documentation [here](https://package-name.js.org/).
+Read Full Documentation [here](https://template.js.org/).
 
 ## Features
 
