@@ -5,8 +5,8 @@
 **Template for Parbez's Repositories.**
 
 [![GitHub](https://img.shields.io/github/license/imranbarbhuiya/package-template)](https://github.com/imranbarbhuiya/package-template/blob/main/LICENSE.md)
-[![codecov](https://codecov.io/gh/imranbarbhuiya/package-template/branch/main/graph/badge.svg?token=token)](https://codecov.io/gh/imranbarbhuiya/package-template)
-[![npm](https://img.shields.io/npm/v/@imranbarbhuiya/package-template?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@imranbarbhuiya/package-template)
+[![codecov](https://codecov.io/gh/imranbarbhuiya/template/branch/main/graph/badge.svg?token=token)](https://codecov.io/gh/imranbarbhuiya/template)
+[![npm](https://img.shields.io/npm/v/@imranbarbhuiya/template?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@imranbarbhuiya/template)
 
 </div>
 
@@ -21,32 +21,32 @@
 
 A description of the package.
 
-Read Full Documentation [here](https://package-name.js.org/).
+Read Full Documentation [here](https://template.js.org/).
 
 ## Features
 
 - Written In Typescript
 - Offers CJS, ESM and UMD builds
-- Full Full TypeScript & JavaScript support
+- Full TypeScript & JavaScript support
 
 ## Install
 
 ```bash
 # npm
 # TODO: change name
-npm i package-name
+npm i template
 
 # yarn
-yarn add package-name
+yarn add template
 
 ```
 
 ## Usage
 
-**Note:** While examples uses `import`, it maps 1:1 with CommonJS' require syntax. For example, `import { package } from 'package-name'` is the same as `const { package } = require('package-name')`.
+**Note:** While examples uses `import`, it maps 1:1 with CommonJS' require syntax. For example, `import { package } from 'package-name'` is the same as `const { mahrin } = require('template')`.
 
 ```ts
-import { package } from 'package-name';
+import { mahrin } from 'template';
 ```
 
 ### Some contents goes here //TODO
