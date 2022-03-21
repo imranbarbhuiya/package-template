@@ -34,19 +34,19 @@ Read Full Documentation [here](https://template.js.org/).
 ```bash
 # npm
 # TODO: change name
-npm i package-name
+npm i template
 
 # yarn
-yarn add package-name
+yarn add template
 
 ```
 
 ## Usage
 
-**Note:** While examples uses `import`, it maps 1:1 with CommonJS' require syntax. For example, `import { package } from 'package-name'` is the same as `const { package } = require('package-name')`.
+**Note:** While examples uses `import`, it maps 1:1 with CommonJS' require syntax. For example, `import { package } from 'package-name'` is the same as `const { mahrin } = require('template')`.
 
 ```ts
-import { package } from 'package-name';
+import { mahrin } from 'template';
 ```
 
 ### Some contents goes here //TODO
