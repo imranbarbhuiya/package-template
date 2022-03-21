@@ -27,7 +27,7 @@ Read Full Documentation [here](https://package-name.js.org/).
 
 - Written In Typescript
 - Offers CJS, ESM and UMD builds
-- Full Full TypeScript & JavaScript support
+- Full TypeScript & JavaScript support
 
 ## Install
 
