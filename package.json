@@ -27,7 +27,7 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"prepublishOnly": "rollup-type-bundler",
-		"postinstall": "husky install"
+		"prepare": "husky install"
 	},
 	"keywords": [
 		"some keywords"
