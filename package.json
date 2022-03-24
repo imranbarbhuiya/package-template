@@ -27,7 +27,7 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"prepublishOnly": "rollup-type-bundler",
-		"prepare": "husky install"
+		"prepare": "husky install .github/husky"
 	},
 	"keywords": [
 		"some keywords"
