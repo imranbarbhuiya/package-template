@@ -25,9 +25,9 @@ Read Full Documentation [here](https://template.js.org/).
 
 ## Features
 
-- Written In Typescript
-- Offers CJS, ESM and UMD builds
-- Full TypeScript & JavaScript support
+-   Written In Typescript
+-   Offers CJS, ESM and UMD builds
+-   Full TypeScript & JavaScript support
 
 ## Install
 
