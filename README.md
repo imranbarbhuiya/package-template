@@ -13,9 +13,10 @@
 ## Steps after creating a repo with this template
 
 1. Find and replace all instances of `template` with the package name.
-2. Ensure branch protection is on
-3. Enable Codecov for the repository
-4. Remove this section from the README
+2. remove `true ||` from workflows
+3. Ensure branch protection is on
+4. Enable Codecov for the repository
+5. Remove this section from the README
 
 ## Description
 
