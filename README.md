@@ -32,22 +32,16 @@ Read Full Documentation [here](https://template.js.org/).
 
 ## Install
 
+You can use the following command to install this package, or replace npm install with your package manager of choice.
+
 ```bash
-# npm
-# TODO: change name
-npm i template
-
-# yarn
-yarn add template
-
+npm i @imranbarbhuiya/package-template
 ```
 
 ## Usage
 
-**Note:** While examples uses `import`, it maps 1:1 with CommonJS' require syntax. For example, `import { package } from 'package-name'` is the same as `const { mahrin } = require('template')`.
-
 ```ts
-import { mahrin } from 'template';
+import { fn } from 'template';
 ```
 
 ### Some contents goes here //TODO
