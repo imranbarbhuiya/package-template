@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig({
 	clean: true,
-	dts: false,
+	dts: true,
 	entry: ['src/index.ts'],
 	format: ['esm', 'cjs', 'iife'],
 	minify: false,
@@ -11,12 +11,5 @@ export default defineConfig({
 	target: 'es2021',
 	keepNames: true,
 	globalName: 'template',
-	tsconfig: 'src/tsconfig.json',
-	esbuildOptions: (options, context) => {
-		if (context.format === 'cjs') {
-			options.banner = {
-				js: '"use strict";'
-			};
-		}
-	}
+	tsconfig: 'src/tsconfig.json'
 });
