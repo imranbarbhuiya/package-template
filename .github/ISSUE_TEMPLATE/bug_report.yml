@@ -1,5 +1,5 @@
 name: Bug report
-description: Report incorrect or unexpected behavior of a package
+description: Report incorrect or unexpected behavior of a package.
 labels: [bug, 'bug:unverified']
 body:
   - type: textarea

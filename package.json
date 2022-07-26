@@ -1,5 +1,5 @@
 {
-	"name": "@imranbarbhuiya/template",
+	"name": "@imranbarbhuiya/package-template",
 	"version": "0.0.1",
 	"description": "Package description.",
 	"main": "dist/index.js",
