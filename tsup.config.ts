@@ -8,8 +8,9 @@ export default defineConfig({
 	minify: false,
 	skipNodeModulesBundle: true,
 	sourcemap: true,
-	target: 'es2021',
+	target: 'esnext',
 	keepNames: true,
 	globalName: 'template',
-	tsconfig: 'src/tsconfig.json'
+	tsconfig: 'src/tsconfig.json',
+	treeshake: true
 });

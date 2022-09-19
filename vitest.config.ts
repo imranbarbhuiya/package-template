@@ -5,7 +5,8 @@ export default defineConfig({
 		globals: true,
 		coverage: {
 			enabled: true,
-			reporter: ['text', 'lcov', 'clover']
+			reporter: ['text', 'lcov', 'clover'],
+			provider: 'c8'
 		}
 	}
 });
