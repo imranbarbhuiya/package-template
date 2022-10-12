@@ -1,4 +1,4 @@
-import { main } from '../src';
+import { main } from '../src/index.js';
 
 describe('Tests', () => {
 	test('should pass', () => {
