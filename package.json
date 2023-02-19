@@ -45,7 +45,7 @@
 		"@vitest/coverage-c8": "^0.28.5",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.34.0",
-		"eslint-config-mahir": "^0.0.21",
+		"eslint-config-mahir": "^0.0.22",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.1.2",
 		"pinst": "^3.0.0",
