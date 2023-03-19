@@ -41,8 +41,8 @@
 		"@commitlint/config-conventional": "^17.4.4",
 		"@favware/cliff-jumper": "^2.0.0",
 		"@favware/npm-deprecate": "^1.0.7",
-		"@types/node": "^18.15.0",
-		"@vitest/coverage-c8": "^0.29.2",
+		"@types/node": "^18.15.3",
+		"@vitest/coverage-c8": "^0.29.3",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.36.0",
 		"eslint-config-mahir": "^0.0.23",
@@ -51,9 +51,9 @@
 		"pinst": "^3.0.0",
 		"prettier": "^2.8.4",
 		"tsup": "^6.6.3",
-		"typedoc": "^0.23.26",
+		"typedoc": "^0.23.27",
 		"typescript": "^4.9.5",
-		"vitest": "^0.29.2"
+		"vitest": "^0.29.3"
 	},
 	"files": [
 		"dist/**/*.js*",
@@ -85,5 +85,5 @@
 		"ansi-regex": "^5.0.1",
 		"minimist": "^1.2.8"
 	},
-	"packageManager": "yarn@3.4.1"
+	"packageManager": "yarn@3.5.0"
 }
