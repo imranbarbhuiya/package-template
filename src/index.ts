@@ -1,1 +1,1 @@
-export * from './lib/index.js';
+export const main = () => 'this builds and pushes';
