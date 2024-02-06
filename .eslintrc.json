@@ -1,5 +1,9 @@
 {
 	"root": true,
 	"extends": ["mahir/common", "mahir/node", "mahir/typescript", "mahir/prettier"],
-	"ignorePatterns": ["**/dist/*"]
+	"ignorePatterns": ["**/dist/*"],
+	"rules": {
+		"unicorn/number-literal-case": "off",
+		"import/order": "off"
+	}
 }
