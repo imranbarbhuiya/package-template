@@ -16,7 +16,8 @@
 2. remove `true ||` from workflows
 3. Ensure branch protection is on
 4. Enable Codecov for the repository
-5. Remove this section from the README
+5. Add `CODECOV_TOKEN` and `NPM_PUBLISH_TOKEN` to the repository secrets
+6. Remove this section from the README
 
 ## Description
 
