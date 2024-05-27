@@ -48,7 +48,7 @@
 		"eslint": "^8.57.0",
 		"eslint-config-mahir": "^0.0.43",
 		"husky": "^9.0.11",
-		"lint-staged": "^15.2.2",
+		"lint-staged": "^15.2.5",
 		"pinst": "^3.0.0",
 		"tsup": "^8.0.2",
 		"typedoc": "^0.25.13",
