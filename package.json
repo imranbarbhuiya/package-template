@@ -42,7 +42,7 @@
 		"@commitlint/config-conventional": "^19.5.0",
 		"@favware/cliff-jumper": "^4.1.0",
 		"@favware/npm-deprecate": "^1.0.7",
-		"@types/node": "^20.16.10",
+		"@types/node": "^20.16.11",
 		"@vitest/coverage-v8": "^2.1.2",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.57.1",
@@ -51,8 +51,8 @@
 		"lint-staged": "^15.2.10",
 		"pinst": "^3.0.0",
 		"tsup": "^8.3.0",
-		"typedoc": "^0.26.8",
-		"typescript": "^5.6.2",
+		"typedoc": "^0.26.9",
+		"typescript": "^5.6.3",
 		"vitest": "^2.1.2"
 	},
 	"files": [
