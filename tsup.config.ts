@@ -4,7 +4,7 @@ export default defineConfig({
 	clean: true,
 	dts: true,
 	entry: ['src/index.ts'],
-	format: ['esm', 'cjs', 'iife'],
+	format: ['esm', 'iife'],
 	minify: false,
 	skipNodeModulesBundle: true,
 	sourcemap: true,
@@ -12,5 +12,5 @@ export default defineConfig({
 	keepNames: true,
 	globalName: 'template',
 	tsconfig: 'src/tsconfig.json',
-	treeshake: true
+	treeshake: true,
 });

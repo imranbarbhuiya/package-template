@@ -1,7 +1,8 @@
 {
 	"compilerOptions": {
+		"types": ["vitest/globals"],
 		"target": "esnext",
-		"module": "commonjs",
+		"module": "preserve",
 		"strict": true,
 		"noImplicitAny": true,
 		"strictNullChecks": true,
@@ -11,10 +12,13 @@
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
+		"verbatimModuleSyntax": true,
+		"skipLibCheck": true,
 		"lib": ["es2021"],
 		"declaration": true,
-		"outDir": "dist"
+		"emitDeclarationOnly": true,
+		"noEmit": true
 	},
-	"includes": ["src/**/*.ts"]
+	"include": ["src", "tests", "scripts", "vitest.config.ts", "tsup.config.ts", "eslint.config.js"]
 }
