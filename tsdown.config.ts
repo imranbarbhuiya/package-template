@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 export default defineConfig({
 	clean: true,
@@ -6,10 +6,8 @@ export default defineConfig({
 	entry: ['src/index.ts'],
 	format: ['esm', 'iife'],
 	minify: false,
-	skipNodeModulesBundle: true,
 	sourcemap: true,
 	target: 'esnext',
-	keepNames: true,
 	globalName: 'template',
 	tsconfig: 'src/tsconfig.json',
 	treeshake: true,

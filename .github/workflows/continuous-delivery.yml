@@ -1,52 +1,82 @@
 name: Continuous Delivery
 
 on:
-    workflow_dispatch:
-        inputs:
-            prNumber:
-                description: The number of the PR that is being deployed
-                required: true
-            ref:
-                description: The branch that is being deployed. Should be a branch on the given repository
-                required: false
-                default: main
-            repository:
-                description: The {owner}/{repository} that is being deployed.
-                required: false
-                default: imranbarbhuiya/package-template
-    push:
-        branches:
-            - main
+  workflow_dispatch:
+    inputs:
+      prNumber:
+        description: The number of the PR that is being deployed
+        required: true
+      ref:
+        description: The branch that is being deployed. Should be a branch on the given repository
+        required: false
+        default: main
+      repository:
+        description: The {owner}/{repository} that is being deployed.
+        required: false
+        default: imranbarbhuiya/package-template
+  push:
+    branches:
+      - main
+    tags:
+      - v*
 
 jobs:
-    Publish:
-        name: Publish Next to npm
-        runs-on: ubuntu-latest
-        if: github.repository_owner == 'imranbarbhuiya'
-        steps:
-            - name: Checkout Project
-              uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-              with:
-                  fetch-depth: 0
-                  repository: ${{ github.event.inputs.repository || 'imranbarbhuiya/package-template' }}
-                  ref: ${{ github.event.inputs.ref || 'main' }}
-            - name: Add TypeScript problem matcher
-              run: echo "::add-matcher::.github/problemMatchers/tsc.json"
-            - name: Use Node.js v20
-              uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
-              with:
-                  node-version: 20
-                  cache: yarn
-                  registry-url: https://registry.yarnpkg.com/
-            - name: Install Dependencies
-              run: yarn --immutable
-            - name: Bump Version & Publish
-              run: |
-                  # Resolve the tag to be used. "next" for push events, "pr-{prNumber}" for dispatch events.
-                  TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
-                  yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
-                  yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
-                  yarn bump --preid "${TAG}.$(git rev-parse --verify --short HEAD)"
-                  true || yarn npm publish --tag ${TAG}
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+  Publish-Next:
+    name: Publish Next to npm
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+          repository: ${{ github.event.inputs.repository || 'imranbarbhuiya/package-template' }}
+          ref: ${{ github.event.inputs.ref || 'main' }}
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2.2.0
+      - name: Use Node.js v24
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      - name: Install Dependencies
+        run: bun install --frozen-lockfile
+      - name: Bump Version & Publish
+        run: |
+          TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
+          bun run bump --preid "${TAG}.$(git rev-parse --verify --short HEAD)" --skip-changelog
+          npm publish --provenance --tag ${TAG}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  Publish-Latest:
+    name: Publish Latest to npm
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2.2.0
+      - name: Use Node.js v24
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      - name: Install Dependencies
+        run: bun install --frozen-lockfile
+      - name: Publish
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          npm version "${VERSION}" --no-git-tag-version --allow-same-version
+          npm publish --provenance --tag latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

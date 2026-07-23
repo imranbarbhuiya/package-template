@@ -1,5 +1,7 @@
 import common from 'eslint-config-mahir/common';
+import module from 'eslint-config-mahir/module';
 import node from 'eslint-config-mahir/node';
+import tsdoc from 'eslint-config-mahir/tsdoc';
 import typescript from 'eslint-config-mahir/typescript';
 
 /**
@@ -9,21 +11,18 @@ export default [
 	...common,
 	...node,
 	...typescript,
+	...module,
+	...tsdoc,
 	{
-		rules: {
-			'import-x/order': 'off',
-		},
 		languageOptions: {
 			parserOptions: {
 				projectService: {
-					allowDefaultProject: ['eslint.config.js', 'tsup.config.ts', 'vitest.config.ts'],
-					defaultProject: 'tsconfig.base.json',
+					allowDefaultProject: ['*.js', '*.ts'],
 				},
-				tsconfigRootDir: import.meta.dirname,
 			},
 		},
 	},
 	{
-		ignores: ['.github', '.yarn', 'dist'],
+		ignores: ['.github', 'node_modules', 'dist'],
 	},
 ];

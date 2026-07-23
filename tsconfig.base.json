@@ -20,5 +20,5 @@
 		"emitDeclarationOnly": true,
 		"noEmit": true
 	},
-	"include": ["src", "tests", "scripts", "vitest.config.ts", "tsup.config.ts", "eslint.config.js"]
+	"include": ["src", "tests", "scripts", "vitest.config.ts", "tsdown.config.ts", "eslint.config.js"]
 }
