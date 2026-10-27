@@ -1,10 +1,8 @@
 {
 	"recommendations": [
-		"esbenp.prettier-vscode",
-		"dbaeumer.vscode-eslint",
+		"oxc.oxc-vscode",
+		"TypeScriptTeam.native-preview",
 		"github.vscode-pull-request-github",
-		"eamodio.gitlens",
-		"christian-kohler.npm-intellisense",
-		"christian-kohler.path-intellisense"
+		"eamodio.gitlens"
 	]
 }

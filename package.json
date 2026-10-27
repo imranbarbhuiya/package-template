@@ -2,83 +2,93 @@
 	"name": "@imranbarbhuiya/package-template",
 	"version": "0.0.1",
 	"description": "Package description.",
-	"type": "module",
-	"main": "dist/index.mjs",
-	"browser": "dist/index.iife.js",
-	"unpkg": "dist/index.iife.js",
-	"types": "dist/index.d.mts",
-	"exports": {
-		"types": "./dist/index.d.mts",
-		"import": "./dist/index.mjs"
-	},
-	"sideEffects": false,
-	"license": "MIT",
-	"author": "@imranbarbhuiya",
-	"scripts": {
-		"docs": "typedoc",
-		"lint": "TIMING=1 eslint --cache .",
-		"format": "prettier --write --cache --experimental-cli .",
-		"test": "vitest run",
-		"test:watch": "vitest",
-		"update": "bun update --interactive",
-		"build": "tsdown",
-		"typecheck": "tsc -p tsconfig.base.json",
-		"bump": "cliff-jumper",
-		"check-update": "cliff-jumper --dry-run",
-		"prepack": "bun run build && pinst --disable",
-		"postinstall": "husky install .github/husky",
-		"postpack": "pinst --enable"
-	},
 	"keywords": [
 		"some keywords"
 	],
-	"publishConfig": {
-		"access": "public"
+	"homepage": "https://template.js.org/",
+	"bugs": {
+		"url": "https://github.com/imranbarbhuiya/template/issues"
 	},
-	"devDependencies": {
-		"@commitlint/cli": "^21.2.4",
-		"@commitlint/config-conventional": "^21.2.4",
-		"@favware/cliff-jumper": "^6.1.0",
-		"@types/node": "^26.1.1",
-		"@vitest/coverage-v8": "^4.1.12",
-		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^9.39.5",
-		"eslint-config-mahir": "^1.4.1",
-		"husky": "^9.1.7",
-		"lint-staged": "^17.6.0",
-		"pinst": "^3.0.0",
-		"prettier": "^3.9.10",
-		"tsdown": "^0.22.14",
-		"typedoc": "^0.28.20",
-		"typescript": "^6.0.3",
-		"vitest": "^4.1.12"
-	},
-	"files": [
-		"dist/**"
-	],
+	"license": "MIT",
+	"author": "Parbez <imranbarbhuiya.fsd@gmail.com>",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/imranbarbhuiya/template.git"
 	},
-	"bugs": {
-		"url": "https://github.com/imranbarbhuiya/template/issues"
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"types": "./dist/index.d.mts",
+			"import": "./dist/index.mjs"
+		},
+		"./effect": {
+			"types": "./dist/effect.d.mts",
+			"import": "./dist/effect.mjs"
+		}
 	},
-	"homepage": "https://template.js.org/",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "tsdown",
+		"docs": "typedoc",
+		"typecheck": "tsc -p tsconfig.json",
+		"lint": "oxlint --fix .",
+		"lint:check": "oxlint .",
+		"format": "oxfmt",
+		"format:check": "oxfmt --check",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"update": "bun update --interactive",
+		"bump": "cliff-jumper",
+		"check-update": "cliff-jumper --dry-run",
+		"prepack": "bun run build",
+		"prepare": "husky .github/husky && effect-tsgo patch --typescript --oxlint"
+	},
+	"dependencies": {
+		"effect": "^4.0.6"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^21.2.4",
+		"@commitlint/config-conventional": "^21.2.4",
+		"@effect/tsgo": "^0.59.0",
+		"@effect/vitest": "^4.0.6",
+		"@favware/cliff-jumper": "^6.1.0",
+		"@imranbarbhuiya/oxc-config": "^0.4.1",
+		"@types/node": "^26.6.5",
+		"@typescript/native": "npm:typescript@^7.0.2",
+		"@vitest/coverage-v8": "^5.0.5",
+		"cz-conventional-changelog": "^3.3.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.6.0",
+		"oxfmt": "^0.75.0",
+		"oxlint": "1.89.0",
+		"oxlint-tsgolint": "^7.0.2005",
+		"tsdown": "^0.23.2",
+		"typedoc": "^0.28.20",
+		"typescript": "^6.0.3",
+		"vitest": "^5.0.5"
+	},
+	"lint-staged": {
+		"*": "oxfmt --no-error-on-unmatched-pattern",
+		"*.{js,mjs,cjs,ts,mts,cts}": "oxlint --fix"
+	},
 	"commitlint": {
 		"extends": [
 			"@commitlint/config-conventional"
 		]
 	},
-	"lint-staged": {
-		"*.{mjs,cjs,js,ts,tsx}": [
-			"eslint --fix",
-			"prettier --write"
-		],
-		"*.{json,yml,yaml,md}": "prettier --write"
-	},
 	"config": {
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
 		}
-	}
+	},
+	"engines": {
+		"node": ">=24"
+	},
+	"packageManager": "bun@1.4.4"
 }

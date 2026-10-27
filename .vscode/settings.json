@@ -1,14 +1,11 @@
 {
-	"eslint.validate": ["typescript"],
-	"editor.tabSize": 4,
-	"editor.useTabStops": true,
-	"editor.insertSpaces": false,
-	"editor.detectIndentation": false,
-	"files.eol": "\n",
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit"
+		"source.fixAll": "never",
+		"source.fixAll.oxc": "explicit",
+		"source.organizeImports": "never"
 	},
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.defaultFormatter": "oxc.oxc-vscode",
 	"editor.formatOnSave": true,
-	"prettier.enable": true
+	"files.eol": "\n",
+	"js/ts.experimental.useTsgo": true
 }

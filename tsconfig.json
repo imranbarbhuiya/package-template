@@ -1,0 +1,27 @@
+{
+	"$schema": "./node_modules/@effect/tsgo/schema.json",
+	"compilerOptions": {
+		"target": "es2024",
+		"lib": ["es2024"],
+		"types": ["node"],
+		"module": "preserve",
+		"moduleResolution": "bundler",
+		"moduleDetection": "force",
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"exactOptionalPropertyTypes": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"verbatimModuleSyntax": true,
+		"erasableSyntaxOnly": true,
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"noEmit": true,
+		"plugins": [{ "name": "@effect/language-service", "allowedUnstableApis": ["@effect/vitest"] }]
+	},
+	"include": ["src", "tests", "*.ts"]
+}
